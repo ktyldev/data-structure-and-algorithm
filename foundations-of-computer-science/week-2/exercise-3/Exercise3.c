@@ -15,8 +15,8 @@ int main()
 
     printf("\nEnter new size of array: ");
     scanf("%d", &n2);
-    ptr = realloc(ptr, ?);
-    for(i = 0; i < ?; ++i)
-         printf("%u\t", ? + i);
+    ptr = realloc(ptr, n2 * sizeof(int));
+    for(i = 0; i < n2; ++i)
+         printf("%u\t", ptr + i);
     return 0;
 }
