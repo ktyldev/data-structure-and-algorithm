@@ -16,7 +16,11 @@ int main()
         printf("%s:\n", cities[i]);
         for (int j = 0; j < 7; j++)
         {
-            printf("%d, ", temps[i][j]);
+            printf("%d", temps[i][j]);
+            if (j != 6)
+            {
+                printf(", ");
+            }
         }
         printf("\n");
     }
