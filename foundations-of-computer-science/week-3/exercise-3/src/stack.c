@@ -13,7 +13,10 @@ int main()
 {
     for (int i = 1; i <= MAX; i++)
     {
-        push(i);
+        if (i % 2 != 0)
+        {
+            push(i);
+        }
     }
 
     while (isEmpty() == 0)
@@ -44,7 +47,7 @@ int pop()
 {
     if (front == -1)
     {
-        printf("Stack is empty\n");
+        printf("Stack is empty");
     }
 
     int result = stack_array[rear];

@@ -2,7 +2,6 @@
 
 void enqueue(int n);
 int dequeue();
-void display();
 
 #define MAX 10
 int queue_array[MAX];
@@ -16,10 +15,15 @@ int main()
         enqueue(i);
     }
 
-    while (front != -1)
+    for (int i = 0; i < MAX; i++)
     {
-        printf("%d ", dequeue());
-    } 
+        int val = dequeue();
+
+        if (val % 2 != 0)
+        {
+            printf("%d ", val);
+        }
+    }
 }
 
 void enqueue(int n)
@@ -62,18 +66,4 @@ int dequeue()
     }
 
     return result;
-}
-
-void display()
-{
-    if (front == -1)
-    {
-        printf("Queue is empty");
-        return;
-    }
-
-    for (int i = 0; i <= rear; i++)
-    {
-        printf("%d ", queue_array[i]);
-    }
 }
